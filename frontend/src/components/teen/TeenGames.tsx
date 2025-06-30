@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -12,11 +11,12 @@ const TeenGames: React.FC = () => {
   const games = [
     {
       id: 1,
-      title: 'Mood Booster Quiz',
+      title: 'Mood Booster Games',
       description: 'Answer fun questions to discover activities that boost your mood',
       color: 'bg-pink-500',
       icon: Smile,
-      shadowColor: 'shadow-pink-500/20'
+      shadowColor: 'shadow-pink-500/20',
+      link: 'https://regal-douhua-d16c0a.netlify.app/' // Link to the game
     },
     {
       id: 2,
@@ -24,7 +24,8 @@ const TeenGames: React.FC = () => {
       description: 'Build a daily gratitude practice with interactive challenges',
       color: 'bg-yellow-500',
       icon: Heart,
-      shadowColor: 'shadow-yellow-500/20'
+      shadowColor: 'shadow-yellow-500/20',
+      link: 'https://regal-douhua-d16c0a.netlify.app/' // Link to the game
     },
     {
       id: 3,
@@ -32,7 +33,8 @@ const TeenGames: React.FC = () => {
       description: 'Complete tasks and challenges to build self-confidence',
       color: 'bg-purple-500',
       icon: Star,
-      shadowColor: 'shadow-purple-500/20'
+      shadowColor: 'shadow-purple-500/20',
+      link: 'https://regal-douhua-d16c0a.netlify.app/' // Link to the game
     },
     {
       id: 4,
@@ -40,9 +42,14 @@ const TeenGames: React.FC = () => {
       description: 'Quick activities to energize your mind and body',
       color: 'bg-cyan-500',
       icon: Zap,
-      shadowColor: 'shadow-cyan-500/20'
+      shadowColor: 'shadow-cyan-500/20',
+      link: 'https://regal-douhua-d16c0a.netlify.app/' // Link to the game
     }
   ];
+
+  const openGame = (url: string) => {
+    window.open(url, '_blank'); // Open in a new tab
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -71,6 +78,7 @@ const TeenGames: React.FC = () => {
             <Card
               key={game.id}
               className={`cursor-pointer transition-all duration-300 hover:scale-105 border-0 shadow-lg ${game.shadowColor} bg-white`}
+              onClick={() => openGame(game.link)} // Open the game link on click
             >
               <CardHeader className="text-center">
                 <div className={`w-16 h-16 ${game.color} rounded-full mx-auto mb-4 flex items-center justify-center`}>
