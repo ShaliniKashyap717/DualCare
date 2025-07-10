@@ -16,7 +16,7 @@ const TeenGames: React.FC = () => {
       color: 'bg-pink-500',
       icon: Smile,
       shadowColor: 'shadow-pink-500/20',
-      link: 'https://regal-douhua-d16c0a.netlify.app/' // Link to the game
+      link: 'https://regal-douhua-d16c0a.netlify.app/'
     },
     {
       id: 2,
