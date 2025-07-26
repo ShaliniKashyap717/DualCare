@@ -39,9 +39,4 @@ DualCare is an AI-powered, voice-first wellness assistant designed to support bo
 
 ---
 
-## 🚀 Getting Started
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/DualCare.git
-cd DualCare
